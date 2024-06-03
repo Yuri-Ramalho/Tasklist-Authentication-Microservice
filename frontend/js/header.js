@@ -39,6 +39,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const logoutButton = document.getElementById('logout-button');
     logoutButton.addEventListener('click', logoutUser);
+
+    const taskListButton = document.getElementById('task-list-button');
+    taskListButton.addEventListener('click', function(event) {
+
+      event.preventDefault();
+
+      const sessionToken = localStorage.getItem('sessionToken');
+
+      if (!sessionToken) {
+        alert('Você não está logado. Por favor, faça o login para acessar a lista de tarefas.');
+      } else {
+        window.location.href = '/html/task-list.html';
+      }
+    });
+
   }
 
   function renderLoggedOutHeader() {
