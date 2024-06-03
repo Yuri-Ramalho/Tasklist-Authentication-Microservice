@@ -1,0 +1,24 @@
+html {
+  height: 100%;
+  width: 100%;
+
+}
+
+/* General styles for the header */
+.navbar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-item .btn {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav .nav-item .btn:hover {
+  background-color: #0056b3;
+  color: white;
+}
