@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
   const headerContainer = document.getElementById('header-placeholder');
 
