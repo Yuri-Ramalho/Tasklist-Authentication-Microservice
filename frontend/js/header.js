@@ -40,21 +40,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const logoutButton = document.getElementById('logout-button');
     logoutButton.addEventListener('click', logoutUser);
 
-    // Adiciona um ouvinte de eventos ao botão "Task List"
+
     const taskListButton = document.getElementById('task-list-button');
     taskListButton.addEventListener('click', function(event) {
-      // Impede o comportamento padrão do link
+
       event.preventDefault();
-      
-      // Obtém o token de sessão do localStorage
+
       const sessionToken = localStorage.getItem('sessionToken');
 
-      // Verifica se há um token de sessão
       if (!sessionToken) {
-        // Se não houver um token de sessão, exibe um alerta
         alert('Você não está logado. Por favor, faça o login para acessar a lista de tarefas.');
       } else {
-        // Se houver um token de sessão, redireciona para a página de lista de tarefas
         window.location.href = '/html/task-list.html';
       }
     });
